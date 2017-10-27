@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".moudle.user.AboutActivity">
+
+    <include layout="@layout/custom_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_about_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掌上政务"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size" />
+
+        <TextView
+            android:id="@+id/version_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0.0"
+            android:textSize="@dimen/large_text_size" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_layout"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_about_company"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/company_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="云南省投资审批服务中心管理办公室"
+                android:textSize="@dimen/normal_text_size" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_about_address"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="昆明市大观路282号"
+                android:textSize="@dimen/normal_text_size" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_about_phone"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="0871-68227270"
+                android:textSize="@dimen/normal_text_size" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_about_email"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="zwfw@yn.gov.cn"
+                android:textSize="@dimen/normal_text_size" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_about_web"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/web_url"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="http://59.216.193.37/"
+                android:textSize="@dimen/normal_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:text="@string/authorization"
+        android:textSize="@dimen/small_text_size" />
+
+</RelativeLayout>

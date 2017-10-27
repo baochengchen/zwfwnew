@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ztesoft.zwfw.widget.ElasticScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/apply_info_task_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/activity_horizontal_margin">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="办件人基本信息"
+                android:textSize="@dimen/large_text_size"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dimgrey"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="申请人信息"
+                android:textSize="@dimen/normal_text_size"/>
+
+            <include
+                layout="@layout/apply_info_merge"/>
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/apply_info_web_layout"
+            layout="@layout/fragment_apply_info_web"/>
+
+
+    </LinearLayout>
+
+</com.ztesoft.zwfw.widget.ElasticScrollView>
+

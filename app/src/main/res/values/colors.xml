@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="dodgerblue">#1E90FF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="hintDark">#A6A6A6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_blue">#87CEFA</color>
+    <color name="dark_orange">#FF8C00</color>
+    <color name="limegreen">#32CD32</color>
+    <color name="mediumvioletred">#C71585</color>
+    <color name="lightgray">#D3D3D3</color>
+    <color name="forestgreen">#228B22</color>
+    <color name="weakforestgreen">#66228B22</color>
+
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+
+    <color name="weakdimgrey">#66696969</color>
+
+    <color name="gray">#DBDBDB</color>
+    <color name="red">#F00</color>
+    <!-- 雪白色 -->
+    <color name="floralwhite">#FFFAF0</color>
+    <color name="black">#000000</color>
+    <color name="whitesmoke">#F5F5F5</color>
+
+    <!-- 灰色 -->
+    <color name="grey">#808080</color>
+
+    <color name="bottom_tab_color">#d8d8d8</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+</resources>

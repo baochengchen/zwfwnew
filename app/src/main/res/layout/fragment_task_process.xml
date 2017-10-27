@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ztesoft.zwfw.widget.ElasticScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+
+    <com.ztesoft.zwfw.widget.NoScrollListView
+        android:id="@+id/process_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null">
+    </com.ztesoft.zwfw.widget.NoScrollListView>
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/task_process_item" />
+
+        <include layout="@layout/task_process_item_undo" />
+
+        <include layout="@layout/task_process_item_undo" />s
+
+    </LinearLayout>-->
+
+</com.ztesoft.zwfw.widget.ElasticScrollView>
+
