@@ -98,6 +98,7 @@ public class TaskFragment extends BaseFragment {
         });
 
 
+
         mTaskLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -116,7 +117,7 @@ public class TaskFragment extends BaseFragment {
 
     private void requestData() {
 
-        RequestManager.getInstance().postHeader(Config.BASE_URL + Config.URL_QRYWORKLIST + "?page=" + curPage + "&size=20", "{\"linkCodeList\":[\"04-01\", \"04-02\", \"02-02\"],\"isNotContainLinkCode\":true}", new RequestManager.RequestListener() {
+        RequestManager.getInstance().postHeader(Config.BASE_URL + Config.URL_QRYWORKLIST + "?page=" + curPage + "&size=20", "{\"linkCodeList\":[],\"isNotContainLinkCode\":true}", new RequestManager.RequestListener() {
             @Override
             public void onRequest(String url, int actionId) {
             }
@@ -132,9 +133,9 @@ public class TaskFragment extends BaseFragment {
                         mTasks.clear();
                         mTasks.addAll(resp.getContent());
                         mTaskAdapter.notifyDataSetChanged();
-                        if(resp.getContent().size()==0){
+                        if (resp.getContent().size() == 0) {
                             mNoDataLayout.setVisibility(View.VISIBLE);
-                        }else{
+                        } else {
                             mNoDataLayout.setVisibility(View.GONE);
                         }
                     } else {
@@ -152,12 +153,12 @@ public class TaskFragment extends BaseFragment {
             @Override
             public void onError(String errorMsg, String url, int actionId) {
                 mTaskLv.onRefreshComplete();
-                if(SessionUtils.invalid(errorMsg)){
-                    Toast.makeText(getActivity(),"会话超时",Toast.LENGTH_SHORT).show();
+                if (SessionUtils.invalid(errorMsg)) {
+                    Toast.makeText(getActivity(), "会话超时", Toast.LENGTH_SHORT).show();
                     APPPreferenceManager.getInstance().saveObject(getActivity(), Config.IS_LOGIN, false);
-                    startActivity(new Intent(getActivity(),LoginActivity.class));
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
                     getActivity().finish();
-                }else{
+                } else {
                     Toast.makeText(getActivity(), "请求数据失败", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -194,12 +195,12 @@ public class TaskFragment extends BaseFragment {
             public void onSuccess(String response, String url, int actionId) {
                 QueryTaskListResp resp = JSON.parseObject(response, QueryTaskListResp.class);
                 if (null != resp) {
-                    if(totalSize == Integer.parseInt(resp.getTotalElements())){
+                    if (totalSize == Integer.parseInt(resp.getTotalElements())) {
                         mTasks.remove(curClickPositon);
                         if (resp.getContent().size() > 0) {
                             mTasks.add(curClickPositon, resp.getContent().get(curPageOffset));
                         }
-                    }else{
+                    } else {
                         mTasks.remove(curClickPositon);
                         totalSize = Integer.parseInt(resp.getTotalElements());
                     }
@@ -209,13 +210,13 @@ public class TaskFragment extends BaseFragment {
 
             @Override
             public void onError(String errorMsg, String url, int actionId) {
-                if(SessionUtils.invalid(errorMsg)){
-                    Toast.makeText(getActivity(),"会话超时",Toast.LENGTH_SHORT).show();
+                if (SessionUtils.invalid(errorMsg)) {
+                    Toast.makeText(getActivity(), "会话超时", Toast.LENGTH_SHORT).show();
                     APPPreferenceManager.getInstance().saveObject(getActivity(), Config.IS_LOGIN, false);
-                    startActivity(new Intent(getActivity(),LoginActivity.class));
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
                     getActivity().finish();
-                }else{
-                    Toast.makeText(getActivity(),errorMsg,Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), errorMsg, Toast.LENGTH_SHORT).show();
                 }
             }
         }, curClickPage);
